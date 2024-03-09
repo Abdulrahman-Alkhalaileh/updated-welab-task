@@ -1,0 +1,58 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn TS & NextJS",
+      "completed": true,
+      "edited": false
+    },
+    {
+      "id": "2",
+      "title": "Complete the UI With MUI",
+      "completed": false,
+      "edited": false
+    },
+    {
+      "id": "3",
+      "title": "Complete Filter functionality",
+      "completed": true,
+      "edited": false
+    },
+    {
+      "id": "4",
+      "title": "Complete Delete & Edit & completed functionality",
+      "completed": true,
+      "edited": false
+    },
+    {
+      "id": "5",
+      "title": "Complete Add Todo Form with validation",
+      "completed": true,
+      "edited": false
+    },
+    {
+      "id": "6",
+      "title": "Save and use data from Local Storage",
+      "completed": false,
+      "edited": false
+    },
+    {
+      "id": "7",
+      "title": "Complete theme functionality",
+      "completed": false,
+      "edited": false
+    },
+    {
+      "id": "8",
+      "title": "Responsive Design",
+      "completed": true,
+      "edited": false
+    },
+    {
+      "id": "96d72610-fe37-4a75-ae30-6df8a6c9b649",
+      "title": "This is a new Todo",
+      "completed": true,
+      "edited": false
+    }
+  ]
+}
