@@ -16,7 +16,7 @@ This is the updated version of welab-task.
 
 -   formatting code on save to increase readability.
 -   change the styling of the dark theme to fix contrast in colors.
--   MUI styled component on (PinkSwitch-Header) for now.
+-   MUI styled component on (PinkSwitch-Header, MyButton) for now.
 
 ### How I applied SOLID principles in the project:
 

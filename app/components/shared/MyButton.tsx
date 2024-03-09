@@ -1,33 +1,39 @@
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 
 type MyButtonType = {
-    newTodoTitle: string;
+    disabled: boolean;
     handleClearInput: () => void;
     children: any;
 };
 
+const CustomButton = styled(Button)(({ theme }) => ({
+    backgroundColor: "#f18194",
+    fontWeight: "bold",
+    [theme.breakpoints.up("xs")]: {
+        fontSize: "11px",
+    },
+    [theme.breakpoints.up("sm")]: {
+        fontSize: "15px",
+    },
+    "&:hover": {
+        backgroundColor: "#b65e6d",
+    },
+}));
+
 const MyButton: React.FC<MyButtonType> = ({
-    newTodoTitle,
+    disabled,
     handleClearInput,
     children,
 }) => {
     return (
-        <Button
+        <CustomButton
             variant="contained"
-            disabled={newTodoTitle.length < 4}
+            disabled={disabled}
             type="submit"
             onClick={handleClearInput}
-            sx={{
-                backgroundColor: "#f18194",
-                fontWeight: "bold",
-                fontSize: { xs: "11px", sm: "15px" },
-                "&:hover": {
-                    backgroundColor: "#b65e6d",
-                },
-            }}
         >
             {children}
-        </Button>
+        </CustomButton>
     );
 };
 

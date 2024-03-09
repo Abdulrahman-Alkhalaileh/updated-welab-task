@@ -7,27 +7,27 @@ import { useContext } from "react";
 import { LuListTodo } from "react-icons/lu";
 import TodoThemeContext from "../../context/TodoThemeContext";
 
+const PinkSwitch = styled(Switch)(({ theme }) => ({
+    "& .MuiSwitch-switchBase.Mui-checked": {
+        color: "#db7485",
+        "&:hover": {
+            backgroundColor: alpha(
+                pink[600],
+                theme.palette.action.hoverOpacity
+            ),
+        },
+    },
+    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+        backgroundColor: pink[600],
+    },
+}));
+
 const Header = () => {
     const { theme, setTheme } = useContext(TodoThemeContext);
 
     function handleTheme() {
         theme === "light" ? setTheme("dark") : setTheme("light");
     }
-
-    const PinkSwitch = styled(Switch)(({ theme }) => ({
-        "& .MuiSwitch-switchBase.Mui-checked": {
-            color: "#db7485",
-            "&:hover": {
-                backgroundColor: alpha(
-                    pink[600],
-                    theme.palette.action.hoverOpacity
-                ),
-            },
-        },
-        "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-            backgroundColor: pink[600],
-        },
-    }));
 
     return (
         <header>

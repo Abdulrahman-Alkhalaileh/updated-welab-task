@@ -45,7 +45,7 @@ const FormElements: React.FC<FormELementsTypes> = ({
                 />
                 {/* For more modulerity (Open-Close principle) MyButton*/}
                 <MyButton
-                    newTodoTitle={newTodoTitle}
+                    disabled={newTodoTitle.length < 4}
                     handleClearInput={handleClearInput}
                 >
                     {formType}
