@@ -1,17 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Important Notes
+
+This is the updated version of welab-task.
+
+### Here are changes I made:
+
+-Useing query params (searchParams) instead of useState to filter Todos.
+-Use json-server to store Todos data instead of LocalStorage and context.
+-Seperates project components into server & client components.
+-Created a serverFunctions folder to extend the requierd server functions into the server components.
+
+### How I applied SOLID principles in the project:
+
+#### Single Responsiibility:
+
+Breaking down the component so each component has one job such as:
+
+-MyCard only takes children and gives them styling
+=MyButton
+-MyTextField
+
+#### Open-Closed Principle:
+
+The component should be open for extending and closed for modification so:
+
+-I made a serverFunctions folder and extends the function in the components requiring it.
+-In MyCard component, the children components extends the behavior of MyCard without modifying their own code.
+
+#### Liskov substitution:
+
+-children of MyButton component inherits It's style and the behavior of it
+-children of MyCard inherits It's style.
+-layout of the root takes added the Header components and pass the root page children to it.
+
+#### Interface segregation principle:
+
+Creating focused and specific interface for our components
+-I have applied it with MyCard, MyButton, MyTextfield
+
+#### Dependency inversion:
+
+High level components should not depend on low level component, both should abstract thier data from abstraction.
+
+-Using theme as a context so it provides data for all components of the project.
+-serverFunctions which I abstract it into the server components directly to get and modify data.
 
 ## Getting Started
 
-First, run the development server:
+First, you need to run the json-server on port 5000:
+
+```bash
+npx json-server --port 5000 data.json
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -19,15 +63,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
