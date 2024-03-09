@@ -15,9 +15,9 @@ This is the updated version of welab-task.
 
 Breaking down the component so each component has one job such as:
 
--   MyCard only takes children and gives them styling
-    = MyButton
--   MyTextField
+-   MyCard only takes children and gives them styling.
+-   MyButton.
+-   MyTextField.
 
 #### Open-Closed Principle:
 
