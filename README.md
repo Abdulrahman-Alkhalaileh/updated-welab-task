@@ -4,10 +4,10 @@ This is the updated version of welab-task.
 
 ### Here are changes I made:
 
--Useing query params (searchParams) instead of useState to filter Todos.
--Use json-server to store Todos data instead of LocalStorage and context.
--Seperates project components into server & client components.
--Created a serverFunctions folder to extend the requierd server functions into the server components.
+-   Useing query params (searchParams) instead of useState to filter Todos.
+-   Use json-server to store Todos data instead of LocalStorage and context.
+-   Seperates project components into server & client components.
+-   Created a serverFunctions folder to extend the requierd server functions into the server components.
 
 ### How I applied SOLID principles in the project:
 
@@ -15,34 +15,35 @@ This is the updated version of welab-task.
 
 Breaking down the component so each component has one job such as:
 
--MyCard only takes children and gives them styling
-=MyButton
--MyTextField
+-   MyCard only takes children and gives them styling
+    = MyButton
+-   MyTextField
 
 #### Open-Closed Principle:
 
 The component should be open for extending and closed for modification so:
 
--I made a serverFunctions folder and extends the function in the components requiring it.
--In MyCard component, the children components extends the behavior of MyCard without modifying their own code.
+-   I made a serverFunctions folder and extends the function in the components requiring it.
+-   In MyCard component, the children components extends the behavior of MyCard without modifying their own code.
 
 #### Liskov substitution:
 
--children of MyButton component inherits It's style and the behavior of it
--children of MyCard inherits It's style.
--layout of the root takes added the Header components and pass the root page children to it.
+-   Children of MyButton component inherits It's style and the behavior of it
+-   Children of MyCard inherits It's style.
+-   Layout of the root takes added the Header components and pass the root page children to it.
 
 #### Interface segregation principle:
 
 Creating focused and specific interface for our components
--I have applied it with MyCard, MyButton, MyTextfield
+
+-   I have applied it with MyCard, MyButton, MyTextfield
 
 #### Dependency inversion:
 
 High level components should not depend on low level component, both should abstract thier data from abstraction.
 
--Using theme as a context so it provides data for all components of the project.
--serverFunctions which I abstract it into the server components directly to get and modify data.
+-   Using theme as a context so it provides data for all components of the project.
+-   serverFunctions which I abstract it into the server components directly to get and modify data.
 
 ## Getting Started
 
