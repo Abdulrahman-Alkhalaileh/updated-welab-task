@@ -14,9 +14,12 @@ This is the updated version of welab-task.
 
 ### Extra changes:
 
--   formatting code on save to increase readability.
--   change the styling of the dark theme to fix contrast in colors.
--   MUI styled component on (PinkSwitch-Header, MyButton) for now.
+-   Formatting code on save to increase readability.
+-   Change the styling of the dark theme to fix contrast in colors.
+-   MUI styled component on folder named (custom) containes all the MUI styled components.
+-   Replace the custom theme (context & LocalStorage) with the built-in MUI themeProvider.
+-   Integrate MUI with NextJS server component & create theme.ts file to set the available themes(dark & light).
+-   Make theme a server theme by set and get it's value from the server.
 
 ### How I applied SOLID principles in the project:
 
@@ -27,6 +30,7 @@ Breaking down the component so each component has one job such as:
 -   MyCard only takes children and gives them styling.
 -   MyButton.
 -   MyTextField.
+-   New (styled components)
 
 #### Open-Closed Principle:
 

@@ -54,5 +54,11 @@
       "completed": true,
       "edited": false
     }
+  ],
+  "theme": [
+    {
+      "id": "theme",
+      "value": "dark"
+    }
   ]
 }

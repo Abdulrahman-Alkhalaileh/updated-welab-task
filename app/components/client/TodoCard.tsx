@@ -6,7 +6,8 @@ import MyCard from "../shared/MyCard";
 import { useContext, useEffect, useState } from "react";
 import { Todo } from "../server/TodoList";
 import FormElements from "../shared/FormElements";
-import TodoThemeContext from "../../context/TodoThemeContext";
+import MyTextField from "../shared/MyTextField";
+import TodoUpdateForm from "../server/TodoUpdateForm";
 
 interface TodoCardPropsType {
     todo: Todo;
@@ -21,7 +22,6 @@ const TodoCard: React.FC<TodoCardPropsType> = ({
     deleteTodo,
     editTodo,
 }) => {
-    const { theme } = useContext(TodoThemeContext);
     const [updatedTodoTitle, setUpdatedTodoTitle] = useState<string>("");
     const [edited, setEdited] = useState(false);
 
@@ -53,6 +53,7 @@ const TodoCard: React.FC<TodoCardPropsType> = ({
                         />
                     </form>
                 ) : (
+                    // <TodoUpdateForm />
                     <Typography
                         variant="body1"
                         fontWeight={600}
@@ -61,11 +62,7 @@ const TodoCard: React.FC<TodoCardPropsType> = ({
                             textDecoration: todo.completed
                                 ? "line-through"
                                 : "none",
-                            color: todo.completed
-                                ? "#2bb35e"
-                                : theme === "dark"
-                                ? "#bdbbbb"
-                                : "black",
+                            color: todo.completed ? "#2bb35e" : "inherit",
                             fontSize: { xs: "14px", sm: "20px" },
                         }}
                     >

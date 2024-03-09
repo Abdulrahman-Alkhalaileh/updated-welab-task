@@ -1,6 +1,4 @@
-import TodoThemeContext from "@/app/context/TodoThemeContext";
-import { TextField } from "@mui/material";
-import { useContext } from "react";
+import CustomTextField from "./custom/CustomTextField";
 
 type MyTextFieldType = {
     formType: string;
@@ -15,10 +13,8 @@ const MyTextField = ({
     handleTitleChange,
     isInputValid,
 }: MyTextFieldType) => {
-    const { theme } = useContext(TodoThemeContext);
-
     return (
-        <TextField
+        <CustomTextField
             name="title"
             id="outlined-textarea"
             // label="What is your todo?"
@@ -30,23 +26,6 @@ const MyTextField = ({
             value={newTodoTitle}
             onChange={handleTitleChange}
             onClick={isInputValid}
-            sx={{
-                "&:hover": {
-                    ".MuiOutlinedInput-notchedOutline": {
-                        borderColor: "#6e6e6e",
-                    },
-                },
-                "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: theme === "dark" ? "#545454" : "black",
-                },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                    {
-                        borderColor: theme === "dark" ? "white" : "black",
-                    },
-                "& .MuiOutlinedInput-input": {
-                    color: theme === "dark" ? "white" : "black",
-                },
-            }}
         />
     );
 };

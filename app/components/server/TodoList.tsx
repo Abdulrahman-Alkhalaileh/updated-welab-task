@@ -1,10 +1,7 @@
 import { Box, Button, ButtonGroup, Typography } from "@mui/material";
 import TodoCard from "../client/TodoCard";
-import { useContext, useEffect, useState } from "react";
-import TodoThemeContext from "../../context/TodoThemeContext";
 import Link from "next/link";
 import getTodos from "../../serverFunctions/getTodos";
-import { revalidatePath } from "next/cache";
 import toggleCompleted from "../../serverFunctions/toggleCompleted";
 import deleteTodo from "../../serverFunctions/deleteTodo";
 import editTodo from "../../serverFunctions/editTodo";
@@ -43,11 +40,7 @@ const TodoList = async ({ queryParam }: any) => {
                     alignItems: "center",
                 }}
             >
-                <Typography
-                    variant="body1"
-                    fontWeight={"bold"}
-                    color={"#cc6879"}
-                >
+                <Typography variant="body1" fontWeight={"bold"}>
                     Todos Count: {filteredTodos() && filteredTodos().length}
                 </Typography>
                 <ButtonGroup variant="text" aria-label="Basic button group">

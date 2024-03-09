@@ -1,24 +1,11 @@
 import { Button, styled } from "@mui/material";
+import CustomButton from "./custom/CustomButton";
 
 type MyButtonType = {
     disabled: boolean;
     handleClearInput: () => void;
     children: any;
 };
-
-const CustomButton = styled(Button)(({ theme }) => ({
-    backgroundColor: "#f18194",
-    fontWeight: "bold",
-    [theme.breakpoints.up("xs")]: {
-        fontSize: "11px",
-    },
-    [theme.breakpoints.up("sm")]: {
-        fontSize: "15px",
-    },
-    "&:hover": {
-        backgroundColor: "#b65e6d",
-    },
-}));
 
 const MyButton: React.FC<MyButtonType> = ({
     disabled,
