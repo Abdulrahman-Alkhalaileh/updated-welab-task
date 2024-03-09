@@ -8,6 +8,15 @@ This is the updated version of welab-task.
 -   Use json-server to store Todos data instead of LocalStorage and context.
 -   Seperates project components into server & client components.
 -   Created a serverFunctions folder to extend the requierd server functions into the server components.
+-   Handling errors and fixing bugs (root page).
+-   Make the theme compatable with the new changes.
+-   destructure the TodoForm(server component) form into FormElements(client component) to handle client validation on the textField and button.
+
+### Extra changes:
+
+-   formatting code on save to increase readability.
+-   change the styling of the dark theme to fix contrast in colors.
+-   MUI styled component on (PinkSwitch-Header) for now.
 
 ### How I applied SOLID principles in the project:
 
