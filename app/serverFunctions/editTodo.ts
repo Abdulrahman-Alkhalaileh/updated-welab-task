@@ -1,5 +1,11 @@
 import { revalidatePath } from "next/cache";
-import { Todo } from "../components/server/TodoList";
+
+export type Todo = {
+    id: string;
+    title: string;
+    completed: boolean;
+    edited: boolean;
+};
 
 export default async function editTodo(todo: Todo, newTodoTitle: string) {
     "use server";

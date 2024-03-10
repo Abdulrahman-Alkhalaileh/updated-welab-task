@@ -3,8 +3,8 @@ import { Box, Checkbox, Typography } from "@mui/material";
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import MyCard from "../shared/MyCard";
-import { useContext, useEffect, useState } from "react";
-import { Todo } from "../server/TodoList";
+import { useEffect, useState } from "react";
+import { Todo } from "@/app/serverFunctions/editTodo";
 import FormElements from "../shared/FormElements";
 
 interface TodoCardPropsType {
