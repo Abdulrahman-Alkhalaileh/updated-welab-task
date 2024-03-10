@@ -6,8 +6,6 @@ import MyCard from "../shared/MyCard";
 import { useContext, useEffect, useState } from "react";
 import { Todo } from "../server/TodoList";
 import FormElements from "../shared/FormElements";
-import MyTextField from "../shared/MyTextField";
-import TodoUpdateForm from "../server/TodoUpdateForm";
 
 interface TodoCardPropsType {
     todo: Todo;
@@ -53,7 +51,6 @@ const TodoCard: React.FC<TodoCardPropsType> = ({
                         />
                     </form>
                 ) : (
-                    // <TodoUpdateForm />
                     <Typography
                         variant="body1"
                         fontWeight={600}
