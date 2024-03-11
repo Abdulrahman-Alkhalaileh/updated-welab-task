@@ -1,5 +1,5 @@
 import { revalidatePath } from "next/cache";
-import { Todo } from "../components/server/TodoList";
+import { Todo } from "./editTodo";
 
 export default async function toggleCompleted(todo: Todo) {
     "use server";
